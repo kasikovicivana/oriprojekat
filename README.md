@@ -7,5 +7,5 @@
    Branislav Anđelić
    
    
-  Pokretanje projekta:
+  #Pokretanje projekta
     Da biste pokrenuli projekat potrebno je skinuti sve biblioteke u projektu, nakon toga možete pokrenuti željeni algoritam.
