@@ -3,10 +3,7 @@ import pandas as pd
 import sklearn
 from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import GaussianNB, MultinomialNB
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler, normalize
 from sklearn.metrics import confusion_matrix, classification_report
-import matplotlib
 from matplotlib import pyplot as plt
 import seaborn as sns
 import hickle as hkl
@@ -22,8 +19,8 @@ NB_model = GaussianNB()
 NB_model.fit(X_train, y_train)
 NB_pred = NB_model.predict(X_test)
 NB_pred_train = NB_model.predict(X_train)
-NB_score = NB_model.score(X_test, y_test)
-NB_score_train = NB_model.score(X_train, y_train)
+#NB_score = NB_model.score(X_test, y_test)
+#NB_score_train = NB_model.score(X_train, y_train)
 NB_matrix = confusion_matrix(y_test, NB_pred)
 NB_matrix_train = confusion_matrix(y_train, NB_pred_train)
 print("Trenirajuci skup: ", classification_report(y_train, NB_pred_train))
