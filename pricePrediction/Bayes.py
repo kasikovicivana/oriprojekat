@@ -6,9 +6,11 @@ from sklearn.naive_bayes import GaussianNB, MultinomialNB
 from sklearn.metrics import confusion_matrix, classification_report
 from matplotlib import pyplot as plt
 import seaborn as sns
-import hickle as hkl
+import pickle as hkl
 
-data = hkl.load('data.hkl')
+file = open('data.hkl', 'rb')
+data = hkl.load(file)
+file.close()
 X_train = data['xtrain']
 X_test = data['xtest']
 y_train = data['ytrain']

@@ -13,7 +13,9 @@ X_std = scaler.transform(X)
 
 X_train, X_test, y_train, y_test = train_test_split(X_std, y, test_size=0.1)
 
-import hickle as hkl
+import pickle as hkl
 
 data = {'xtrain': X_train, 'xtest': X_test, 'ytrain': y_train, 'ytest': y_test}
-hkl.dump(data, 'data.hkl')
+file = open('data.hkl', 'wb')
+hkl.dump(data, file)
+file.close()
